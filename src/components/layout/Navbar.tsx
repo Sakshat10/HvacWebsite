@@ -10,7 +10,7 @@ function Navbar() {
     <div className="text-black">
 
       {/*********************  Review ************************************/}
-      <div className="bg-primary text-white flex justify-between font-bold text-2xl items-center px-32 py-4">
+      <div className="bg-primary text-white flex justify-between font-bold text-xl items-center px-32 py-4">
         <div><h1>{review.title}</h1></div>
         <div><h1>{review.country}</h1></div>
       </div>
@@ -21,7 +21,7 @@ function Navbar() {
 
       {/*********************  top banner ************************************/}
             <div className="">
-            <div className="text-primary font-semibold text-3xl  mb-6">
+            <div className="text-primary font-semibold text-2xl  mb-6">
                <p>{topBanner.heading}</p>
                <p>{topBanner.subheading}</p>
             </div>
@@ -30,7 +30,7 @@ function Navbar() {
 
       {/*********************  Emergency ************************************/}
             <div>
-              <div className="font-semibold text-black text-3xl  mb-6">
+              <div className="font-semibold text-black text-2xl  mb-6">
                 <p>{emergency.heading}</p>
                 <p className="text-primary font-bold  mt-3 text-center">{emergency.subheading}</p>
               </div>
