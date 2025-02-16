@@ -11,8 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "#512D6D", // Deep Purple
-        secondary: "#5B3E75", // Soft Lavender
+        primary: "#512D6D", 
+        secondary: "#5B3E75",
+        tertiary: "#E87723"
       },
     },
   },
