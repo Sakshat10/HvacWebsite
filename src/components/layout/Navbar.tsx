@@ -35,7 +35,7 @@ function Navbar() {
                 <p className="text-primary font-bold  mt-3 text-center">{emergency.subheading}</p>
               </div>
               <div>
-                <Button text="BOOK NOW!" className="bg-orange-400"/>
+                <Button text="BOOK NOW!" className="bg-tertiary"/>
               </div>
             </div>
         </div>
