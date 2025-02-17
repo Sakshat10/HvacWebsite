@@ -55,11 +55,11 @@ const HeroForm = () => {
 
       <Toaster position="top-right" reverseOrder={false} />
 
-      <div className="bg-secondary bg-opacity-90 p-5 lg:p-10 rounded-2xl shadow-xl w-full max-w-xl">
-        <h2 className="text-white text-4xl lg:text-5xl font-extrabold mb-4 text-center leading-tight">
+      <div className="bg-secondary bg-opacity-90 p-5 lg:p-10 rounded-2xl shadow-xl w-full max-w-lg">
+        <h2 className="text-white text-4xl  font-extrabold mb-4 text-center leading-tight">
           Let Us Help You!
         </h2>
-        <p className="text-white text-md lg:text-lg mb-10 text-center">
+        <p className="text-white text-md  mb-10 text-center">
           Boston-Comfort-Pros – Your Comfort, Our Priority
         </p>
 
