@@ -10,14 +10,14 @@ function Navbar() {
     <div className="text-black">
 
       {/*********************  Review ************************************/}
-      <div className="bg-primary text-white flex justify-between font-bold text-xl items-center px-32 py-4">
+      <div className="bg-primary text-white flex flex-wrap justify-between font-bold text-xl items-center px-9 lg:px-32 py-4">
         <div><h1>{review.title}</h1></div>
         <div><h1>{review.country}</h1></div>
       </div>
 
       {/*********************  banner section ************************************/}
-      <div className="bg-white px-32 py-6">
-        <div className="flex justify-between items-start">
+      <div className="bg-white lg:px-32 px-10 py-6">
+        <div className="flex flex-wrap justify-between items-start gap-10">
 
       {/*********************  top banner ************************************/}
             <div className="">
@@ -43,7 +43,7 @@ function Navbar() {
       {/*********************  Navlinks ************************************/}
       <div className="mt-10">
         {/* Navigation Links */}
-        <ul className="flex items-center justify-around ">
+        <ul className="flex flex-wrap items-center justify-around ">
           {navlinks.map((link, index) => (
             <li key={index} className="relative">
               <a
