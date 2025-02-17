@@ -21,19 +21,21 @@ function Navbar() {
       </div>
 
       {/*********************  Main Navbar ************************************/}
-      <div className="bg-dark lg:px-32 px-10 py-6 flex items-center justify-between">
-        {/* Logo */}
-        <div className="text-white font-semibold text-2xl">LOGO</div>
+      <div className="bg-dark lg:bg-white lg:px-32 px-10 py-6 ">
 
+<div className="flex justify-between items-center">
+
+      <div className="text-white font-semibold lg:hidden text-2xl">LOGO</div>
         {/* Hamburger Menu for sm and md screens */}
-        <div className="lg:hidden">
+        <div className="lg:hidden text-white">
           <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
             {isOpen ? <X size={32} /> : <Menu size={32} />}
           </button>
         </div>
+</div>
 
         {/* Desktop View: Top Banner + Emergency + NavLinks */}
-        <div className="hidden lg:flex items-start gap-10">
+        <div className="hidden lg:flex justify-between items-start gap-10 pb-10">
           {/* Top Banner */}
           <div>
             <div className="text-primary font-semibold text-2xl mb-6">
@@ -54,10 +56,10 @@ function Navbar() {
         </div>
 
         {/* NavLinks (Visible on lg and above) */}
-        <ul className="hidden lg:flex items-center gap-8">
+        <ul className="hidden lg:flex justify-between items-center gap-8">
           {navlinks.map((link, index) => (
             <li key={index}>
-              <a href={link.href} className="text-2xl hover:underline">
+              <a href={link.href} className="text-2xl hover:text-primary">
                 {link.label}
               </a>
             </li>
