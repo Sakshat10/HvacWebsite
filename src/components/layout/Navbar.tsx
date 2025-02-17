@@ -35,7 +35,7 @@ function Navbar() {
 </div>
 
         {/* Desktop View: Top Banner + Emergency + NavLinks */}
-        <div className="hidden lg:flex justify-between items-start gap-10 pb-10">
+        <div className="hidden lg:flex  justify-between items-start gap-10 pb-10">
           {/* Top Banner */}
           <div>
             <div className="text-primary font-semibold text-2xl mb-6">
@@ -49,14 +49,14 @@ function Navbar() {
           <div>
             <div className="font-semibold text-black text-2xl mb-6">
               <p>{emergency.heading}</p>
-              <p className="text-primary font-bold mt-3 text-center">{emergency.subheading}</p>
+              <p className="text-primary font-bold mt-3 text-3xl text-center">{emergency.subheading}</p>
             </div>
             <Button text="BOOK NOW!" className="bg-tertiary" />
           </div>
         </div>
 
         {/* NavLinks (Visible on lg and above) */}
-        <ul className="hidden lg:flex justify-between items-center gap-8">
+        <ul className="hidden lg:flex justify-between  items-center gap-8">
           {navlinks.map((link, index) => (
             <li key={index}>
               <a href={link.href} className="text-2xl hover:text-primary">
