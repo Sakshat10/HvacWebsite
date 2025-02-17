@@ -9,6 +9,9 @@ function Footer() {
 
     <div className="text-white font-bold text-xl px-10 lg:px-32 pt-10 pb-10 bg-primary">
 
+
+        {/* ******************************** section 1 *********************** */}
+
       <div className="grid grid-cols-1 md:grid-cols-2 max-lg:text-center lg:grid-cols-3 gap-8 pb-16">
         <div className="">
             <h1 className="">JOIN OUR TEAM!</h1>
@@ -23,6 +26,12 @@ function Footer() {
             <Button text="LEARN MORE!" className="bg-tertiary mt-5"/>
         </div>
       </div>
+
+
+
+
+    {/* ******************************** section 2 *********************** */}
+
 
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 place-items-stretch gap-6">
         <div className="max-lg:text-center">
@@ -53,10 +62,10 @@ function Footer() {
       </div>
         </div>
       </div>
+      </div>
 
+    {/* ******************************** section 3 *********************** */}
 
-
-    </div>
     <div className="bg-dark text-white text-center py-4 px-4">
       <p className="text-lg flex justify-center items-center  gap-4 flex-wrap">
         © Copyright {footerCopyright.year} {footerCopyright.companyName}.{" "}
