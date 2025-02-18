@@ -15,13 +15,13 @@ function Navbar() {
     <div className="text-black">
 
       {/*********************  Review (Visible on lg and above) ************************************/}
-      <div className="hidden lg:flex bg-primary text-white justify-between font-bold text-xl items-center px-9 lg:px-32 py-4">
+      <div className="hidden lg:flex bg-primary text-white justify-between font-bold text-xl items-center px-9 lg:px-16 py-4">
         <div><h1>{review.title}</h1></div>
         <div><h1>{review.country}</h1></div>
       </div>
 
       {/*********************  Main Navbar ************************************/}
-      <div className="bg-dark lg:bg-white lg:px-32 px-10 py-6 ">
+      <div className="bg-dark lg:bg-white lg:px-16 px-10 py-6 ">
 
 <div className="flex justify-between items-center">
 
