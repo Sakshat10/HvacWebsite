@@ -1,5 +1,6 @@
 import HeroForm from "@/components/home/hero/HeroForm";
 import HeroHeading from "@/components/home/hero/HeroHeading";
+import Service from "@/components/home/services/Service";
 
 export default function Home() {
   return (
@@ -28,7 +29,9 @@ export default function Home() {
 
 
 {/* ******************************Section ******************************** */}
-
+<div className="">
+  <Service/>
+</div>
 
     </div>
   );
