@@ -55,7 +55,7 @@ const HeroForm = () => {
 
       <Toaster position="top-right" reverseOrder={false} />
 
-      <div className="bg-secondary bg-opacity-90 p-5 lg:p-10 rounded-2xl shadow-xl w-full max-w-md">
+      <div className="bg-secondary bg-opacity-90 p-5 lg:p-10 rounded-2xl shadow-xl w-full max-w-md md:max-w-3xl lg:max-w-md">
         <h2 className="text-white text-4xl  font-extrabold mb-4 text-center leading-tight">
           Let Us Help You!
         </h2>
