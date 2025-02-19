@@ -6,7 +6,7 @@ export default function Home() {
   return (
    <div className="bg-primary">
 
-    {/* ******************************Section ******************************** */}
+    {/* ******************************Section 1 hero******************************** */}
 
     <div
       className="relative bg-cover bg-center p-3 lg:p-8 min-h-screen flex items-center justify-center"
@@ -28,7 +28,7 @@ export default function Home() {
     </div>
 
 
-{/* ******************************Section ******************************** */}
+{/* ******************************Section 2 services ******************************** */}
 <div className="">
   <Service/>
 </div>
