@@ -2,7 +2,6 @@ import  service from "@/content/home/service";
 import { CheckCircle } from "lucide-react";
 
 const ServicesSection: React.FC = () => {
-    console.log(service);
   return (
     <section className="bg-white py-12 px-4 lg:px-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
