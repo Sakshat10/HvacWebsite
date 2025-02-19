@@ -1,5 +1,6 @@
-"use client"
+"use client";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import faqData from "@/content/home/faq";
 import Button from "@/components/ui/Button";
 
@@ -19,7 +20,7 @@ const FAQ = () => {
 
       <div className="max-w-2xl mx-auto text-left">
         {faqData.map((item, index) => (
-          <div key={index} className="border-t border-gray-300">
+          <div key={index} className="border-t border-gray-300 overflow-hidden">
             <button
               className="w-full py-4 flex justify-between items-center text-lg"
               onClick={() => toggleFAQ(index)}
@@ -27,9 +28,20 @@ const FAQ = () => {
               {item.question}
               <span className="text-primary">{openIndex === index ? "−" : "+"}</span>
             </button>
-            {openIndex === index && (
-              <p className="pb-4 text-gray-600">{item.answer}</p>
-            )}
+
+            {/* Animated FAQ Content */}
+            <AnimatePresence>
+              {openIndex === index && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                >
+                  <p className="pb-4 text-gray-600">{item.answer}</p>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         ))}
       </div>
@@ -38,7 +50,7 @@ const FAQ = () => {
         <p className="text-xl font-semibold text-primary mb-5">
           More Questions? Contact Us Today!
         </p>
-        <Button text="Contact Us" className="bg-primary lg:w-1/4 md:w-1/2"/>
+        <Button text="Contact Us" className="bg-primary lg:w-1/4 md:w-1/2" />
       </div>
     </section>
   );
