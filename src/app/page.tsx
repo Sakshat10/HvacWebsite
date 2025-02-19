@@ -36,7 +36,7 @@ export default function Home() {
 </div>
 
 {/* ******************************Section 3 about ******************************** */}
-<div className="bg-primary grid lg:grid-cols-2 grid-cols-1  place-items-center lg:px-10 px-4 py-8">
+<div className="bg-primary grid lg:grid-cols-2 grid-cols-1 gap-9  place-items-center lg:px-10 px-4 py-8">
   <AboutDesc/>
   <AboutImg/>
 </div>
