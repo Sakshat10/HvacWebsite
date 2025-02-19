@@ -1,5 +1,6 @@
 import AboutDesc from "@/components/home/about/AboutDesc";
 import AboutImg from "@/components/home/about/AboutImg";
+import FAQ from "@/components/home/faq/Faq";
 import HeroForm from "@/components/home/hero/HeroForm";
 import HeroHeading from "@/components/home/hero/HeroHeading";
 import Service from "@/components/home/services/Service";
@@ -39,6 +40,11 @@ export default function Home() {
 <div className="bg-primary grid lg:grid-cols-2 grid-cols-1 gap-9  place-items-center lg:px-10 px-4 py-8">
   <AboutDesc/>
   <AboutImg/>
+</div>
+
+{/* ******************************Section 3 about ******************************** */}
+<div className="bg-white text-black">
+  <FAQ/>
 </div>
 
     </div>
