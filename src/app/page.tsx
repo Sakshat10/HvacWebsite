@@ -4,6 +4,8 @@ import FAQ from "@/components/home/faq/Faq";
 import HeroForm from "@/components/home/hero/HeroForm";
 import HeroHeading from "@/components/home/hero/HeroHeading";
 import Service from "@/components/home/services/Service";
+import estimate from "@/content/home/estimate";
+import Button from "@/components/ui/Button";
 
 export default function Home() {
   return (
@@ -13,7 +15,7 @@ export default function Home() {
 
     <div
       className="relative bg-cover bg-center p-3 lg:p-8 min-h-screen flex items-center justify-center"
-      style={{ backgroundImage: "url('https://imgs.search.brave.com/sruhyIEx1-LEtho2cxobt0J2_O2i-8hXLfCjH1vdWFk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTY1/OTkyNTcyL3Bob3Rv/L2h2YWMtaW5zdGFs/bGF0aW9uLXdpdGgt/Y2hpbGxlcnMtYW5k/LWNvbXByZXNzb3Jz/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1mSlVtcE1mdmlh/ejItcy1KOU9NZzN5/Q2xSblJsYXZxX25Z/MVNXV0drNEY0PQ')" }}
+      style={{ backgroundImage: "url('/images/hero.webp')"}}
     >
 
       <div
@@ -32,20 +34,26 @@ export default function Home() {
 
 
 {/* ******************************Section 2 services ******************************** */}
-<div className="">
-  <Service/>
-</div>
+    <div className="">
+      <Service/>
+    </div>
 
 {/* ******************************Section 3 about ******************************** */}
-<div className="bg-primary grid lg:grid-cols-2 grid-cols-1 gap-9  place-items-center lg:px-10 px-4 py-8">
-  <AboutDesc/>
-  <AboutImg/>
-</div>
+    <div className="bg-primary grid lg:grid-cols-2 grid-cols-1 gap-9  place-items-center lg:px-10 px-4 py-8">
+      <AboutDesc/>
+      <AboutImg/>
+    </div>
 
 {/* ******************************Section 3 about ******************************** */}
-<div className="bg-white text-black">
-  <FAQ/>
-</div>
+    <div className="bg-white text-black">
+     <FAQ/>
+    </div>
+
+{/* ******************************Section 4  ******************************** */}
+    <div className="bg-primary flex flex-wrap items-center justify-center gap-4 lg:gap-10 px-3 py-5">
+      <h1 className="font-bold text-xl max-lg:text-center md:text-2xl">{estimate.title}</h1>
+      <Button text="FREE ESTIMATE" className="bg-tertiary lg:w-1/5"/>
+    </div>
 
     </div>
   );
