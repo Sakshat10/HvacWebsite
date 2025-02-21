@@ -32,8 +32,8 @@ const Testimonial = () => {
           <p className="mt-4">
            {review.subheading}
           </p>
-          <div className="mt-4 bg-white p-3 rounded-lg flex items-center shadow-lg">
-            <img src="/images/company-logo.webp" alt="Gee Heating & Air" className="w-10 h-10" />
+          <div className="mt-4 bg-white p-3 rounded-lg flex items-center  shadow-lg">
+            <img src="/images/company-logo.webp" alt="DeanWorks Heating & Air" className="w-10 h-10" />
             <div className="ml-3">
               <h3 className="text-black font-bold">{review.title}</h3>
               <div className="flex text-yellow-400">
@@ -41,7 +41,7 @@ const Testimonial = () => {
                   <FaStar key={i} />
                 ))}
               </div>
-              <p className="text-gray-700 text-sm">128 Trustindex reviews</p>
+              <p className="text-gray-700 text-sm pt-4">{review.value}</p>
             </div>
           </div>
         </div>
