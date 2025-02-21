@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import { useState } from "react";
 import review from "@/content/navbar/review";
 import topBanner from "@/content/navbar/topBanner";
@@ -7,13 +8,22 @@ import navlinks from "@/content/navbar/navlinks";
 import Button from "../ui/Button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import cta from "@/content/navbar/ctaBar";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="text-black">
-
+         {/*********************  Top CTA Bar (Visible on sm and md screens) ************************************/}
+         <div className="w-full lg:hidden flex">
+        <a href="tel:7702326523" className="w-1/2 bg-primary text-white font-bold text-center py-3">
+          {cta.heading1} <br /> {cta.number}
+        </a>
+        <a href="/quote" className="w-1/2 bg-tertiary text-white font-bold text-center py-3">
+          {cta.heading2} <br /> {cta.subheading}
+        </a>
+      </div>
       {/*********************  Review (Visible on lg and above) ************************************/}
       <div className="hidden lg:flex bg-primary text-white justify-between font-bold text-xl items-center px-9 lg:px-16 py-4">
         <div><h1>{review.title}</h1></div>
@@ -21,21 +31,19 @@ function Navbar() {
       </div>
 
       {/*********************  Main Navbar ************************************/}
-      <div className="bg-dark lg:bg-white lg:px-16 px-10 py-6 ">
-
-<div className="flex justify-between items-center">
-
-      <div className="text-white font-semibold lg:hidden text-2xl">LOGO</div>
-        {/* Hamburger Menu for sm and md screens */}
-        <div className="lg:hidden text-white">
-          <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
-            {isOpen ? <X size={32} /> : <Menu size={32} />}
-          </button>
+      <div className="bg-white lg:bg-white lg:px-16 px-10 py-6 ">
+        <div className="flex justify-between items-center">
+          <div className=" font-semibold text-black lg:hidden text-2xl">LOGO</div>
+          {/* Hamburger Menu for sm and md screens */}
+          <div className="lg:hidden text-black">
+            <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
+              {isOpen ? <X size={32} /> : <Menu size={32} />}
+            </button>
+          </div>
         </div>
-</div>
 
         {/* Desktop View: Top Banner + Emergency + NavLinks */}
-        <div className="hidden lg:flex  justify-between items-start gap-10 pb-10">
+        <div className="hidden lg:flex justify-between items-start gap-10 pb-10">
           {/* Top Banner */}
           <div>
             <div className="text-primary font-semibold text-2xl mb-6">
@@ -56,10 +64,10 @@ function Navbar() {
         </div>
 
         {/* NavLinks (Visible on lg and above) */}
-        <ul className="hidden lg:flex justify-between  items-center gap-8">
+        <ul className="hidden lg:flex justify-center items-center gap-12 mt-6">
           {navlinks.map((link, index) => (
             <li key={index}>
-              <a href={link.href} className="text-2xl hover:text-primary">
+              <a href={link.href} className="text-xl font-medium text-gray-700 hover:text-primary transition duration-300">
                 {link.label}
               </a>
             </li>
@@ -120,6 +128,8 @@ function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
+
+   
     </div>
   );
 }
