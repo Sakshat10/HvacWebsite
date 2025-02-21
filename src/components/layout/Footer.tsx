@@ -67,7 +67,7 @@ function Footer() {
     {/* ******************************** section 3 *********************** */}
 
     <div className="bg-dark text-white text-center py-4 px-4">
-      <p className="text-lg flex justify-center items-center  gap-4 flex-wrap">
+      <div className="text-lg flex justify-center items-center  gap-4 flex-wrap">
         © Copyright {footerCopyright.year} {footerCopyright.companyName}.{" "}
         {footerCopyright.rights}
         {footerCopyright.links.map((link, index) => (
@@ -81,7 +81,7 @@ function Footer() {
             </a>
           </div>
         ))}
-      </p>
+      </div>
     </div>
     </div>
   )
