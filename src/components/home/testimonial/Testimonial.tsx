@@ -22,9 +22,9 @@ const Testimonial = () => {
     </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full px-6 md:px-16 flex flex-col md:flex-row items-center justify-around">
+      <div className="relative z-10 w-full px-6 lg:px-16 flex flex-col lg:flex-row items-center justify-around">
         {/* Left Side: Text Content */}
-        <div className="max-w-md text-white">
+        <div className="lg:max-w-md w-full text-white">
           <h4 className="text-orange-400 font-bold uppercase">Reviews</h4>
           <h2 className="text-3xl md:text-4xl font-bold">
             {review.heading}
@@ -46,7 +46,7 @@ const Testimonial = () => {
           </div>
         </div>
 
-        <div className="max-w-lg w-full mt-10 md:mt-0">
+        <div className="lg:max-w-lg w-full mt-10 lg:mt-0">
           <TestimonialCarousel />
         </div>
       </div>
