@@ -8,6 +8,8 @@ import estimate from "@/content/home/estimate";
 import Button from "@/components/ui/Button";
 import Testimonial from "@/components/home/testimonial/Testimonial";
 import Map from "@/components/home/map/Map";
+import ServiceSection from "@/components/home/serviceSection/ServiceSection";
+import FinancingBanner from "@/components/home/FinancingBanner/FinancingBanner";
 
 export default function Home() {
   return (
@@ -47,22 +49,33 @@ export default function Home() {
     </div>
 
 {/* ******************************Section 3 about ******************************** */}
-    <div className="bg-white text-black">
-     <FAQ/>
+    <div>
+      <Map/>
     </div>
 
 {/* ******************************Section 4  ******************************** */}
    <Testimonial/>
 
 {/* ******************************Section 5  ******************************** */}
-    <div className="bg-dark flex flex-wrap items-center justify-center gap-4 lg:gap-10 px-3 py-5">
+<div className="bg-dark flex flex-wrap items-center justify-center gap-4 lg:gap-10 px-3 py-5">
       <h1 className="font-bold text-xl max-lg:text-center md:text-2xl">{estimate.title}</h1>
       <Button text="FREE ESTIMATE" className="bg-tertiary lg:w-1/5"/>
-    </div>
+    </div>    
+
 {/* ******************************Section 6  ******************************** */}
-    <div>
-      <Map/>
+    <div className="bg-white text-black">
+     <FAQ/>
     </div>
+
+{/* ******************************Section 7  ******************************** */}
+    <div>
+      <ServiceSection/>
+    </div>
+{/* ******************************Section 8  ******************************** */}
+    <div className="bg-white lg:p-10 p-4">
+      <FinancingBanner/>
+    </div>
+
 
     </div>
   );
