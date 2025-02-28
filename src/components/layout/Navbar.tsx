@@ -64,15 +64,22 @@ function Navbar() {
         </div>
 
         {/* NavLinks (Visible on lg and above) */}
-        <ul className="hidden lg:flex  justify-center items-center gap-12 mt-6">
-          {navlinks.map((link, index) => (
-            <li key={index}>
-              <a href={link.href} className="text-xl font-medium text-gray-700 hover:text-primary transition duration-300">
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+       {/* NavLinks (Visible on lg and above) */}
+<ul className="hidden lg:flex justify-center items-center gap-20 mt-4">
+  {navlinks.map((link, index) => (
+    <li key={index}>
+      <a
+        href={link.href}
+        className="text-lg font-semibold text-gray-800 tracking-wide transition-all duration-300 hover:text-primary relative"
+      >
+        {link.label}
+        {/* Underline effect for active page */}
+        <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+      </a>
+    </li>
+  ))}
+</ul>
+
       </div>
 
       {/*********************  Mobile Drawer (sm and md screens) ************************************/}
