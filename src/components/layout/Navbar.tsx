@@ -64,7 +64,7 @@ function Navbar() {
         </div>
 
         {/* NavLinks (Visible on lg and above) */}
-        <ul className="hidden lg:flex justify-center items-center gap-12 mt-6">
+        <ul className="hidden lg:flex  justify-center items-center gap-12 mt-6">
           {navlinks.map((link, index) => (
             <li key={index}>
               <a href={link.href} className="text-xl font-medium text-gray-700 hover:text-primary transition duration-300">
