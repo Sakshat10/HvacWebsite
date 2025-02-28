@@ -7,6 +7,7 @@ import Service from "@/components/home/services/Service";
 import estimate from "@/content/home/estimate";
 import Button from "@/components/ui/Button";
 import Testimonial from "@/components/home/testimonial/Testimonial";
+import Map from "@/components/home/map/Map";
 
 export default function Home() {
   return (
@@ -53,12 +54,15 @@ export default function Home() {
 {/* ******************************Section 4  ******************************** */}
    <Testimonial/>
 
-{/* ******************************Section 4  ******************************** */}
+{/* ******************************Section 5  ******************************** */}
     <div className="bg-dark flex flex-wrap items-center justify-center gap-4 lg:gap-10 px-3 py-5">
       <h1 className="font-bold text-xl max-lg:text-center md:text-2xl">{estimate.title}</h1>
       <Button text="FREE ESTIMATE" className="bg-tertiary lg:w-1/5"/>
     </div>
-
+{/* ******************************Section 6  ******************************** */}
+    <div>
+      <Map/>
+    </div>
 
     </div>
   );
