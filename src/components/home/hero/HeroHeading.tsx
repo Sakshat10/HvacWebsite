@@ -8,7 +8,7 @@ function HeroHeading() {
         <p className="text-bold text-lg text-justify ">{heroData.description}</p>
         <h1 className="text-tertiary text-3xl max-lg:text-center ">{heroData.number}</h1>
 
-        <Button text="BOOK NOW!" className="bg-tertiary  lg:w-2/3"/>
+        <Button text="BOOK NOW!" className="bg-tertiary  lg:w-2/3" />
     </div>
   )
 }
