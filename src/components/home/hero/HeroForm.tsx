@@ -9,7 +9,6 @@ const HeroForm = () => {
     email: "",
     phone: "",
     message: "",
-    subscribe: false,
   });
 
   const handleChange = (
@@ -32,18 +31,17 @@ const HeroForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Show success toast
+
     toast.success("Form has been submitted successfully!", {
       position: "top-right",
     });
 
-    // Reset form
+
     setFormData({
       name: "",
       email: "",
       phone: "",
       message: "",
-      subscribe: false,
     });
   };
 
@@ -51,6 +49,7 @@ const HeroForm = () => {
     <div
       className="relative bg-cover bg-center  flex items-center justify-center"
       style={{ backgroundImage: "url('/background.jpg')" }}
+      id="form"
     >
 
       <Toaster position="top-right" reverseOrder={false} />
