@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import review from "@/content/navbar/review";
 import topBanner from "@/content/navbar/topBanner";
@@ -50,7 +49,7 @@ function Navbar() {
               <p>{topBanner.heading}</p>
               <p>{topBanner.subheading}</p>
             </div>
-            <Button text="VIEW SPECIALS" className="bg-primary" />
+            <Button text="VIEW SPECIALS" className="bg-primary"  />
           </div>
 
           {/* Emergency */}
