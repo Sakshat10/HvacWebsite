@@ -2,6 +2,7 @@ import Button from "../ui/Button"
 import footerLinks from "@/content/footer/footerLinks"
 import footerLicense from "@/content/footer/footerLicense"
 import footerCopyright from "@/content/footer/footerCopyright"
+import footerButton from "@/content/footer/footerButton"
 
 function Footer() {
   return (
@@ -15,15 +16,15 @@ function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-2 max-lg:text-center lg:grid-cols-3 gap-8 pb-16">
         <div className="">
             <h1 className="">JOIN OUR TEAM!</h1>
-            <Button text="Careers" className="bg-tertiary mt-5 "/>
+            <Button text={footerButton.ButtonText} className="bg-tertiary mt-5 "/>
         </div>
         <div className="">
             <h1 className="text-center">Comfort Club</h1>
-            <Button text="LEARN MORE!" className="bg-tertiary mt-5"/>
+            <Button text={footerButton.ButtonText2}  className="bg-tertiary mt-5"/>
         </div>
         <div className="">
             <h1 className="lg:text-end">Comfort Club</h1>
-            <Button text="LEARN MORE!" className="bg-tertiary mt-5"/>
+            <Button text={footerButton.ButtonText2}  className="bg-tertiary mt-5"/>
         </div>
       </div>
 
