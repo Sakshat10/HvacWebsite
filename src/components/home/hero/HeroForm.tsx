@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
 
 const HeroForm = () => {
@@ -16,26 +17,17 @@ const HeroForm = () => {
   ) => {
     const { name, value } = e.target;
 
-    // Handle checkbox separately
-    const checked =
-      e.target instanceof HTMLInputElement && e.target.type === "checkbox"
-        ? e.target.checked
-        : undefined;
-
     setFormData((prevData) => ({
       ...prevData,
-      [name]: checked ?? value,
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
-
     toast.success("Form has been submitted successfully!", {
       position: "top-right",
     });
-
 
     setFormData({
       name: "",
@@ -46,18 +38,21 @@ const HeroForm = () => {
   };
 
   return (
-    <div
-      className="relative bg-cover bg-center  flex items-center justify-center"
+    <motion.div
+      initial={{ opacity: 0, x: 50 }} 
+      whileInView={{ opacity: 1, x: 0 }} 
+      transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }} 
+      viewport={{ once: true, amount: 0.2 }}
+      className="relative bg-cover bg-center flex items-center justify-center"
       id="form"
     >
-
       <Toaster position="top-right" reverseOrder={false} />
 
       <div className="bg-secondary bg-opacity-90 p-5 lg:p-10 rounded-2xl shadow-xl w-full max-w-md md:max-w-3xl lg:max-w-md">
-        <h2 className="text-white text-4xl  font-extrabold mb-4 text-center leading-tight">
+        <h2 className="text-white text-4xl font-extrabold mb-4 text-center leading-tight">
           Let Us Help You!
         </h2>
-        <p className="text-white text-md  mb-10 text-center">
+        <p className="text-white text-md mb-10 text-center">
           Boston-Comfort-Pros – Your Comfort, Our Priority
         </p>
 
@@ -108,7 +103,7 @@ const HeroForm = () => {
           </button>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
