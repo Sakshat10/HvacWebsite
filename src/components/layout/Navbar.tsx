@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Star } from "lucide-react";
 import review from "@/content/navbar/review";
 import topBanner from "@/content/navbar/topBanner";
 import emergency from "@/content/navbar/emergency";
@@ -25,7 +26,13 @@ function Navbar() {
       </div>
       {/*********************  Review (Visible on lg and above) ************************************/}
       <div className="hidden lg:flex bg-primary text-white justify-between font-bold text-xl items-center px-9 lg:px-16 py-4">
-        <div><h1>{review.title}</h1></div>
+        <div className="flex items-center gap-2"><h1>{review.title}</h1>
+        <div className="flex text-yellow-500">
+      {[...Array(5)].map((_, index) => (
+        <Star key={index} fill="currentColor" stroke="none" size={24} />
+      ))}
+    </div>
+        </div>
         <div><h1>{review.country}</h1></div>
       </div>
 
@@ -49,7 +56,7 @@ function Navbar() {
               <p>{topBanner.heading}</p>
               <p>{topBanner.subheading}</p>
             </div>
-            <Button text="VIEW SPECIALS" className="bg-primary"  />
+            <Button text={topBanner.ButtonText} className="bg-primary"  />
           </div>
 
           {/* Emergency */}
@@ -58,7 +65,7 @@ function Navbar() {
               <p>{emergency.heading}</p>
               <p className="text-primary font-bold mt-3 text-3xl text-center">{emergency.subheading}</p>
             </div>
-            <Button text="BOOK NOW!" className="bg-tertiary" />
+            <Button text={emergency.ButtonText} className="bg-tertiary" />
           </div>
         </div>
 
