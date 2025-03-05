@@ -25,7 +25,7 @@ export default function Home() {
       <div
         className="absolute  inset-0 bg-primary opacity-70"
         style={{
-          clipPath: 'polygon(0 0, 60% 0, 45% 100%, 0% 100%)',
+          clipPath: 'polygon(0 0, 59% 0, 45% 100%, 0% 100%)',
         }}
       />
 

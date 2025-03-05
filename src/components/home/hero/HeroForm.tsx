@@ -48,7 +48,6 @@ const HeroForm = () => {
   return (
     <div
       className="relative bg-cover bg-center  flex items-center justify-center"
-      style={{ backgroundImage: "url('/background.jpg')" }}
       id="form"
     >
 
