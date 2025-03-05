@@ -19,7 +19,7 @@ const FAQ = () => {
       </h3>
 
       <div className="max-w-2xl mx-auto text-left">
-        {faqData.map((item, index) => (
+        {faqData.faq.map((item, index) => (
           <div key={index} className="border-t border-gray-300 overflow-hidden">
             <button
               className="w-full py-4 flex justify-between items-center text-lg"
@@ -50,7 +50,7 @@ const FAQ = () => {
         <p className="text-xl font-semibold text-primary mb-5">
           More Questions? Contact Us Today!
         </p>
-        <Button text="Contact Us" className="bg-primary lg:w-1/4 md:w-1/2" />
+        <Button text={faqData.faqButton.ButtonText} className="bg-primary lg:w-1/4 md:w-1/2" />
       </div>
     </section>
   );
