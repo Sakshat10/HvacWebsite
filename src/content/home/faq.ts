@@ -1,4 +1,5 @@
- const faqData = [
+ const faqData ={
+  faq:[
     {
       question: "How often should I have my HVAC system serviced?",
       answer: "It's recommended to service your HVAC system at least once a year to maintain efficiency and prolong its lifespan."
@@ -18,7 +19,15 @@
     {
       question: "Are there any energy-efficient options available for heating and cooling?",
       answer: "Yes, modern HVAC systems offer energy-efficient models, including smart thermostats and heat pumps, to reduce energy consumption."
-    }
-  ];
+    },
+  ],
+  faqButton: {
+    ButtonText: "contact us",
+  }
+  
+};
+
+
+
 
   export default faqData;
